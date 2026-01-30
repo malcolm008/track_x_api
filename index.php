@@ -17,14 +17,18 @@ require_once 'controllers/SubscriptionController.php';
 $db = new Database();
 $connection = $db->getConnection();
 
-$request = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$request = str_replace('/track_x', '', $request);
-$segments = explode('/', trim($request, '/'));
+// Parse the request
+$requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$scriptDir = dirname($_SERVER['SCRIPT_NAME']); 
+$request = substr($requestUri, strlen($scriptDir));
+$request = preg_replace('#^/index\.php#', '', $request); 
 
+$segments = explode('/', trim($request, '/'));
 $resource = $segments[0] ?? '';
 $id = $segments[1] ?? null;
 $method = $_SERVER['REQUEST_METHOD'];
 
+// Route the request
 switch ($resource) {
 
     case 'schools':
@@ -32,28 +36,34 @@ switch ($resource) {
         match ($method) {
             'GET' => $id ? $controller->getById($id) : $controller->getAll(),
             'POST' => $controller->create(),
-            'PUT' => $id ? $controller->update($id) : null,
-            'DELETE' => $id ? $controller->delete($id) : null,
+            'PUT' => $id ? $controller->update($id) : http_response_code(400),
+            'DELETE' => $id ? $controller->delete($id) : http_response_code(400),
             default => http_response_code(405)
         };
         break;
 
     case 'plans':
         $controller = new PlanController($connection);
-        if ($method === 'GET') {
-            $controller->getAll();
-        } elseif ($method === 'POST') {
-            $controller->create();
-        }
+        match ($method) {
+            'GET' => $id ? $controller->getById($id) : $controller->getAll(),
+            'POST' => $controller->create(),
+            'PUT' => $id ? $controller->update($id) : http_response_code(400),
+            'DELETE' => $id ? $controller->delete($id) : http_response_code(400),
+            default => http_response_code(405)
+        };
         break;
 
     case 'subscriptions':
         $controller = new SubscriptionController($connection);
-        if ($method === 'GET') {
-            $controller->getAll();
-        } elseif ($method === 'POST') {
-            $controller->create();
-        }
+        match ($method) {
+            'GET' => $controller->getAll(),
+            'POST' => $controller->create(),
+            default => http_response_code(405)
+        };
+        break;
+
+    case '':
+        echo json_encode(["message" => "API is running. Try /schools, /plans, or /subscriptions"]);
         break;
 
     default:
