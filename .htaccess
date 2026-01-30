@@ -1,4 +1,13 @@
 RewriteEngine On
+RewriteBase /track_x/
+
+# Handle front controller
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php/$1 [L]
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Ensure PHP is parsed
+AddType application/x-httpd-php .php
+
+# Disable directory listing
+Options -Indexes
