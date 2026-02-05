@@ -109,7 +109,37 @@ switch ($resource) {
 
     case 'subscriptions':
         $controller = new SubscriptionController($connection);
-        // ... similar routing for subscriptions
+        switch ($method) {
+            case 'GET':
+                if ($id) {
+                    $controller->getById($id);
+                } else {
+                    $controller->getAll();
+                }
+                break;
+            case 'POST':
+                $controller->create();
+                break;
+            case 'PUT':
+                if ($id) {
+                    $controller->update($id);
+                } else {
+                    http_response_code(400);
+                    echo json_encode(["message" => "Subscription ID required"]);
+                }
+                break;
+            case 'DELETE':
+                if ($id) {
+                    $controller->delete($id);
+                } else {
+                    http_response_code(400);
+                    echo json_encode(["message" => "Subscription ID required"]);
+                }
+                break;
+            default:
+                http_response_code(405);
+                echo json_encode(["message" => "Method not allowed"]);
+        }
         break;
 
     case '':

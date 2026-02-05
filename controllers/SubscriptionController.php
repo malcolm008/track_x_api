@@ -188,8 +188,25 @@ class SubscriptionController {
         try {
             $data = json_decode(file_get_contents("php://input"), true);
 
+            // Log the received data for debugging
+            error_log("Received update data: " . print_r($data, true));
+
+            // Check required fields
+            if (!isset($data['school_name'], $data['plan_id'], $data['amount'], $data['status'])) {
+                http_response_code(400);
+                echo json_encode(["message" => "Missing required fields"]);
+                return;
+            }
+
             $query = "UPDATE {$this->table_name}
             SET
+                school_name = :school_name,
+                school_email = :school_email,
+                school_phone = :school_phone,
+                school_address = :school_address,
+                total_students = :total_students,
+                total_buses = :total_buses,
+                plan_id = :plan_id,
                 status = :status,
                 end_date = :end_date,
                 auto_renew = :auto_renew,
@@ -198,6 +215,14 @@ class SubscriptionController {
 
             $stmt = $this->conn->prepare($query);
 
+            // Bind parameters - handle nullable fields
+            $stmt->bindParam(":school_name", $data['school_name']);
+            $stmt->bindParam(":school_email", $data['school_email'] ?? null);
+            $stmt->bindParam(":school_phone", $data['school_phone'] ?? null);
+            $stmt->bindParam(":school_address", $data['school_address'] ?? null);
+            $stmt->bindParam(":total_students", $data['total_students'], PDO::PARAM_INT);
+            $stmt->bindParam(":total_buses", $data['total_buses'], PDO::PARAM_INT);
+            $stmt->bindParam(":plan_id", $data['plan_id'], PDO::PARAM_INT);
             $stmt->bindParam(":status", $data['status']);
             $stmt->bindParam(":end_date", $data['end_date']);
             $stmt->bindParam(":auto_renew", !empty($data['auto_renew']) ? 1 : 0, PDO::PARAM_INT);
@@ -207,14 +232,18 @@ class SubscriptionController {
             $stmt->execute();
 
             http_response_code(200);
-            echo json_encode(["message" => "Subscription updated"]);
+            echo json_encode(["message" => "Subscription updated successfully"]);
 
         } catch (PDOException $e) {
             http_response_code(500);
-            echo json_encode(["message" => $e->getMessage()]);
+            // Return JSON error, not HTML
+            echo json_encode([
+                "message" => "Database error",
+                "error" => $e->getMessage()
+            ]);
         }
     }
-
+    
     public function delete($id) {
         try {
             $stmt = $this->conn->prepare(
