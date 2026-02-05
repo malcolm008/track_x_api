@@ -1,9 +1,4 @@
 <?php
-echo "<!-- DEBUG INFO -->\n";
-echo "<!-- Request URI: " . $_SERVER['REQUEST_URI'] . " -->\n";
-echo "<!-- Script Name: " . $_SERVER['SCRIPT_NAME'] . " -->\n";
-echo "<!-- Resource: $resource -->\n";
-echo "<!-- ID: " . ($id ?? 'null') . " -->\n";
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
@@ -79,7 +74,37 @@ switch ($resource) {
 
     case 'plans':
         $controller = new PlanController($connection);
-        // ... similar routing for plans
+        switch ($method) {
+            case 'GET':
+                if ($id) {
+                    $controller->getById($id);
+                } else {
+                    $controller->getAll();
+                }
+                break;
+            case 'POST':
+                $controller->create();
+                break;
+            case 'PUT':
+                if ($id) {
+                    $controller->update($id);
+                } else {
+                    http_response_code(400);
+                    echo json_encode(["message" => "Plan ID required"]);
+                }
+                break;
+            case 'DELETE':
+                if ($id) {
+                    $controller->delete($id);
+                } else {
+                    http_response_code(400);
+                    echo json_encode(["message" => "School ID required"]);
+                }
+                break;
+            default:
+                http_response_code(405);
+                echo json_encode(["message" => "Method not allowed"]);
+        }
         break;
 
     case 'subscriptions':
