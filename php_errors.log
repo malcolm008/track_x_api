@@ -1,0 +1,330 @@
+[05-Feb-2026 17:32:41 Europe/Berlin] Received update data for ID 1: Array
+(
+    [id] => 1
+    [subscription_code] => SUB-202601-A001
+    [school_code] => SCH-001
+    [school_name] => Green Valley Primary School
+    [school_email] => info@greenvalley.ac.tz
+    [school_phone] => +255712345678
+    [school_address] => Kigamboni, Tanzania
+    [total_students] => 520
+    [total_buses] => 8
+    [plan_id] => 1
+    [amount] => 150000
+    [status] => active
+    [start_date] => 2026-01-01T00:00:00.000
+    [end_date] => 2026-12-31T00:00:00.000
+    [auto_renew] => 1
+    [payment_method] => bank_transfer
+    [transaction_id] => TXN-10001
+    [created_at] => 2026-02-05T13:49:05.000
+)
+
+[05-Feb-2026 17:34:30 Europe/Berlin] Received update data for ID 1: Array
+(
+    [id] => 1
+    [subscription_code] => SUB-202601-A001
+    [school_code] => SCH-001
+    [school_name] => Green Valley Primary School
+    [school_email] => info@greenvalley.ac.tz
+    [school_phone] => +255712345678
+    [school_address] => Arusha, Tanzania
+    [total_students] => 520
+    [total_buses] => 8
+    [plan_id] => 1
+    [amount] => 150000
+    [status] => active
+    [start_date] => 2026-01-01T00:00:00.000
+    [end_date] => 2026-12-31T00:00:00.000
+    [auto_renew] => 1
+    [payment_method] => bank_transfer
+    [transaction_id] => TXN-10001
+    [created_at] => 2026-02-05T13:49:05.000
+)
+
+[05-Feb-2026 17:34:55 Europe/Berlin] Received update data for ID 1: Array
+(
+    [id] => 1
+    [subscription_code] => SUB-202601-A001
+    [school_code] => SCH-001
+    [school_name] => Green Valley Primary School
+    [school_email] => info@greenvalley.ac.tz
+    [school_phone] => +255712345678
+    [school_address] => Arusha, Tanzania
+    [total_students] => 520
+    [total_buses] => 8
+    [plan_id] => 3
+    [amount] => 349.99
+    [status] => active
+    [start_date] => 2026-01-01T00:00:00.000
+    [end_date] => 2026-12-31T00:00:00.000
+    [auto_renew] => 1
+    [payment_method] => bank_transfer
+    [transaction_id] => TXN-10001
+    [created_at] => 2026-02-05T13:49:05.000
+)
+
+[05-Feb-2026 19:57:20 Europe/Berlin] Received update data for ID 1: Array
+(
+    [id] => 1
+    [subscription_code] => SUB-202601-A001
+    [school_code] => SCH-001
+    [school_name] => Green Valley Primary School
+    [school_email] => info@greenvalley.ac.tz
+    [school_phone] => +255712345678
+    [school_address] => Arusha, Tanzania
+    [total_students] => 520
+    [total_buses] => 8
+    [plan_id] => 3
+    [amount] => 349.99
+    [status] => active
+    [start_date] => 2026-01-01T00:00:00.000
+    [end_date] => 2026-04-01T00:00:00.000
+    [auto_renew] => 1
+    [payment_method] => bank_transfer
+    [transaction_id] => TXN-10001
+    [created_at] => 2026-02-05T13:49:05.000
+)
+
+[05-Feb-2026 19:57:46 Europe/Berlin] Received update data for ID 2: Array
+(
+    [id] => 2
+    [subscription_code] => SUB-202601-A002
+    [school_code] => SCH-002
+    [school_name] => Sunrise Secondary School
+    [school_email] => admin@sunrise.ac.tz
+    [school_phone] => +255713456789
+    [school_address] => Dar es Salaam, Tanzania
+    [total_students] => 840
+    [total_buses] => 12
+    [plan_id] => 2
+    [amount] => 300000
+    [status] => active
+    [start_date] => 2026-02-01T00:00:00.000
+    [end_date] => 2026-03-01T00:00:00.000
+    [auto_renew] => 1
+    [payment_method] => mobile_money
+    [transaction_id] => TXN-10002
+    [created_at] => 2026-02-05T13:49:05.000
+)
+
+[05-Feb-2026 20:20:53 Europe/Berlin] Received update data for ID 8: Array
+(
+    [id] => 8
+    [subscription_code] => SUB-20260205-6984ED2A1ACA4
+    [school_code] => SCH-2O9XLNIM
+    [school_name] => United African University of Tanzania
+    [school_email] => uaut@test.com
+    [school_phone] => +255789102196
+    [school_address] => kigamboni
+    [total_students] => 240
+    [total_buses] => 12
+    [plan_id] => 4
+    [amount] => 699.99
+    [status] => active
+    [start_date] => 2026-02-05T00:00:00.000
+    [end_date] => 2026-03-07T00:00:00.000
+    [auto_renew] => 1
+    [payment_method] => manual
+    [transaction_id] => TXN-1770319146093
+    [created_at] => 2026-02-05T22:19:06.000
+)
+
+[05-Feb-2026 20:21:12 Europe/Berlin] Received update data for ID 8: Array
+(
+    [id] => 8
+    [subscription_code] => SUB-20260205-6984ED2A1ACA4
+    [school_code] => SCH-2O9XLNIM
+    [school_name] => United African University of Tanzania
+    [school_email] => uaut@test.com
+    [school_phone] => +255789102196
+    [school_address] => kigamboni
+    [total_students] => 240
+    [total_buses] => 12
+    [plan_id] => 4
+    [amount] => 699.99
+    [status] => active
+    [start_date] => 2026-02-05T00:00:00.000
+    [end_date] => 2026-03-07T00:00:00.000
+    [auto_renew] => 1
+    [payment_method] => manual
+    [transaction_id] => TXN-1770319146093
+    [created_at] => 2026-02-05T22:19:06.000
+)
+
+[05-Feb-2026 20:23:21 Europe/Berlin] Received update data for ID 8: Array
+(
+    [id] => 8
+    [subscription_code] => SUB-20260205-6984ED2A1ACA4
+    [school_code] => SCH-2O9XLNIM
+    [school_name] => United African University of Tanzania
+    [school_email] => uaut@test.com
+    [school_phone] => +255789102196
+    [school_address] => kigamboni
+    [total_students] => 240
+    [total_buses] => 12
+    [plan_id] => 4
+    [amount] => 699.99
+    [status] => active
+    [start_date] => 2026-02-05T00:00:00.000
+    [end_date] => 2027-02-05T00:00:00.000
+    [auto_renew] => 1
+    [payment_method] => manual
+    [transaction_id] => TXN-1770319146093
+    [created_at] => 2026-02-05T22:19:06.000
+)
+
+[05-Feb-2026 20:28:11 Europe/Berlin] Received update data for ID 9: Array
+(
+    [id] => 9
+    [subscription_code] => SUB-20260205-6984EF22CCE6B
+    [school_code] => SCH-5K3JNEZ1
+    [school_name] => United African University of Tanzania
+    [school_email] => uaut@test.com
+    [school_phone] => 0789102196
+    [school_address] => kigamboni
+    [total_students] => 230
+    [total_buses] => 12
+    [plan_id] => 4
+    [amount] => 699.99
+    [status] => active
+    [start_date] => 2026-02-05
+    [end_date] => 2027-02-05
+    [auto_renew] => 1
+    [payment_method] => manual
+    [transaction_id] => TXN-1770319650823
+    [created_at] => 2026-02-05T22:27:30.000
+)
+
+[06-Feb-2026 08:11:58 Europe/Berlin] Received update data for ID 10: Array
+(
+    [id] => 10
+    [subscription_code] => SUB-20260206-6985938ED295B
+    [school_code] => SCH-XV1JEIY7
+    [school_name] => Baobab Secondary School
+    [school_email] => baobab@mecs.co.tz
+    [school_phone] => 0679454099
+    [school_address] => kigamboni, Dar es salaam
+    [total_students] => 2500
+    [total_buses] => 12
+    [plan_id] => 7
+    [amount] => 1499.99
+    [status] => active
+    [start_date] => 2026-02-06
+    [end_date] => 2027-02-06
+    [auto_renew] => 1
+    [payment_method] => manual
+    [transaction_id] => TXN-1770361742837
+    [created_at] => 2026-02-06T10:09:02.000
+)
+
+[06-Feb-2026 08:44:44 Europe/Berlin] Received update data for ID 12: Array
+(
+    [id] => 12
+    [subscription_code] => SUB-20260206-69859BD89A96B
+    [school_code] => SCH-QM2L3V0T
+    [school_name] => Baobab Secondary School
+    [school_email] => baobab@test.com
+    [school_phone] => +255679454099
+    [school_address] => kigamboni, Dar es salaam
+    [total_students] => 2500
+    [total_buses] => 12
+    [plan_id] => 7
+    [amount] => 1499.99
+    [status] => active
+    [start_date] => 2026-02-06
+    [end_date] => 2026-03-08
+    [auto_renew] => 1
+    [payment_method] => manual
+    [transaction_id] => TXN-1770363864597
+    [created_at] => 2026-02-06T10:44:24.000
+)
+
+[06-Feb-2026 15:06:12 Europe/Berlin] Received update data for ID 12: Array
+(
+    [id] => 12
+    [subscription_code] => SUB-20260206-69859BD89A96B
+    [school_code] => SCH-QM2L3V0T
+    [school_name] => Baobab Secondary School
+    [school_email] => baobab@test.com
+    [school_phone] => +255679454099
+    [school_address] => kigamboni, Dar es salaam
+    [total_students] => 2500
+    [total_buses] => 12
+    [plan_id] => 7
+    [amount] => 1499.99
+    [status] => active
+    [start_date] => 2026-02-06
+    [end_date] => 2027-02-06
+    [auto_renew] => 1
+    [payment_method] => manual
+    [transaction_id] => TXN-1770363864597
+    [created_at] => 2026-02-06T10:44:24.000
+)
+
+[06-Feb-2026 17:51:55 Europe/Berlin] Received update data for ID 14: Array
+(
+    [id] => 14
+    [subscription_code] => SUB-20260206-69861C224B789
+    [school_code] => SCH-N41Z9W7V
+    [school_name] => Grace Primary School
+    [school_email] => grace@sinza.com
+    [school_phone] => +255713338436
+    [school_address] => Sinza, Dar es Salaam
+    [total_students] => 540
+    [total_buses] => 5
+    [plan_id] => 7
+    [amount] => 1499.99
+    [status] => active
+    [start_date] => 2026-02-06
+    [end_date] => 2026-03-08
+    [auto_renew] => 1
+    [payment_method] => manual
+    [transaction_id] => TXN-1770396706292
+    [created_at] => 2026-02-06T19:51:46.000
+)
+
+[06-Feb-2026 17:52:03 Europe/Berlin] Received update data for ID 14: Array
+(
+    [id] => 14
+    [subscription_code] => SUB-20260206-69861C224B789
+    [school_code] => SCH-N41Z9W7V
+    [school_name] => Grace Primary School
+    [school_email] => grace@sinza.com
+    [school_phone] => +255713338436
+    [school_address] => Sinza, Dar es Salaam
+    [total_students] => 540
+    [total_buses] => 5
+    [plan_id] => 7
+    [amount] => 1499.99
+    [status] => active
+    [start_date] => 2026-02-06
+    [end_date] => 2026-03-08
+    [auto_renew] => 1
+    [payment_method] => manual
+    [transaction_id] => TXN-1770396706292
+    [created_at] => 2026-02-06T19:51:46.000
+)
+
+[06-Feb-2026 17:52:09 Europe/Berlin] Received update data for ID 14: Array
+(
+    [id] => 14
+    [subscription_code] => SUB-20260206-69861C224B789
+    [school_code] => SCH-N41Z9W7V
+    [school_name] => Grace Primary School
+    [school_email] => grace@sinza.com
+    [school_phone] => +255713338436
+    [school_address] => Sinza, Dar es Salaam
+    [total_students] => 540
+    [total_buses] => 5
+    [plan_id] => 7
+    [amount] => 1499.99
+    [status] => active
+    [start_date] => 2026-02-06
+    [end_date] => 2027-02-06
+    [auto_renew] => 1
+    [payment_method] => manual
+    [transaction_id] => TXN-1770396706292
+    [created_at] => 2026-02-06T19:51:46.000
+)
+
